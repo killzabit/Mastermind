@@ -1,7 +1,6 @@
+# frozen_string_literal: true
 
-
-
-
+# Stores player guess and handles error with player guess.
 class Player
   attr_accessor :current_guess
 
@@ -10,7 +9,8 @@ class Player
   end
 
   def guess
-    puts 'Try to guess the secret code!'
+    puts
+    puts "Try to guess the secret code! \n "
     @current_guess = gets.chomp.downcase
     check_guess_error
   end
@@ -23,7 +23,7 @@ class Player
   end
 
   def handle_guess_error
-    puts "Your guess needs to be 4 characters long, try again"
+    puts "Your guess needs to be 4 characters long, try again \n "
     guess
   end
 end
